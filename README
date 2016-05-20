@@ -2,5 +2,7 @@ Base on symfony crawler and Domelement to retrieve values
 
 How to use:
 cd stu;
-php crawler.php
-Output:  a.csv
+php crawler.php  help
+php crawler.php  --format csv
+php crawler.php  --name stu :  it will generate stu.csv
+php crawler.php  --name stu  --format txt :  it will generate stu.txt
