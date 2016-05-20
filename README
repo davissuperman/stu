@@ -1,1 +1,6 @@
 Base on symfony crawler and Domelement to retrieve values
+
+How to use:
+cd stu;
+php crawler.php
+Output:  a.csv
