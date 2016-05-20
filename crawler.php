@@ -1,18 +1,15 @@
 <?php
 use Symfony\Component\DomCrawler\Crawler;
 require 'Bootstrap.php';
-$html = <<<'HTML'
-<!DOCTYPE html>
-<html>
-    <body>
-        <p class="message">Hello World!</p>
-        <p>Hello Crawler!</p>
-    </body>
-</html>
-HTML;
+
+$url = "http://www.unite-students.com/liverpool";
+$html =  file_get_contents($url);
 
 $crawler = new Crawler($html);
 
-foreach ($crawler as $domElement) {
-    var_dump($domElement->nodeName);
+$res = $crawler->filter('a.text-highlight__inner');
+
+foreach($res as $each){
+    $propertyName = $each->textContent;
+    var_dump($each);
 }
